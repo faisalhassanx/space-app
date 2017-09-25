@@ -60,4 +60,6 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate_user.valid?
   end
   
+  
+  
 end
