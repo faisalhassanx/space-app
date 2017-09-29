@@ -8,6 +8,7 @@ $black: #000000;
 $white: #ffffff;
 $blue: #0645AD;
 $light-blue: #3366BB;
+$hover-special: #EFFFE9;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -73,28 +74,29 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.8em;
-  color: $black;
+  font-size: 1.9em;
+  color: $white;
   letter-spacing: 1px;
   padding-top: 9px;
   font-weight: bold;
   &:hover {
-  color: $gray-light;
+  color: $hover-special;
   text-decoration: none;
   }
 }
 
 
-.navbar-default {
-  background-color: $white;
+.navbar-inverse {
+  background-color: $black;
   border: none;
   .navbar-nav > li > a {
-  color: $blue;
-  text-decoration: underline;
-  font-size: 1.2em;
+  color: $white;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: normal;
     &:hover {
-  color: $light-blue;
-  text-decoration: underline;
+  color: $hover-special;
+  text-decoration: none;
     }
   }
 }
