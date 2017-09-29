@@ -1,6 +1,14 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html,body,#page, header { 
+  height:100%;
+}
+
+/* FOOTER HEIGHT */
+footer { 
+  position:absolute;
+  bottom:0;
+}
 
 /* mixins, variables, etc */
 
@@ -9,6 +17,19 @@ $white: #ffffff;
 $blue: #0645AD;
 $light-blue: #3366BB;
 $hover-special: #EFFFE9;
+$btn-default-bg: #ffffff;
+$btn-default-color: #181842;
+$btn-primary-bg: #181842;
+$btn-primary-color: #f4f5f9;
+$btn-info-bg: #005f6b;
+$btn-info-color: #ffffff;
+$btn-success-bg: #004e66;
+$btn-success-color: #F8FAFF;
+$btn-warning-bg: #a6172d;
+$btn-warning-color: #ffffff;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -87,7 +108,7 @@ p {
 
 
 .navbar-inverse {
-  background-color: $black;
+  background-color: #181842;
   border: none;
   .navbar-nav > li > a {
   color: $white;
@@ -106,36 +127,38 @@ p {
   background-color: $white;
 }
 
-/* footer */
+//  Footer credits pill
 
-footer {
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: $gray-light;
-  a.btn-link {
-  color: $blue;
-  text-decoration: underline;
-  font-size: 1em;
-    &:hover {
-    color: $light-blue;
-    }
-  }
-  small {
-  float: left;
-  }
-  ul {
+footer ul {
   float: right;
   list-style: none;
-  
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
 }
 
-.navbar-fixed-bottom {
-    margin: 10px 200px;
+.nav-pills {
+  background-color: #181842;
+}
+
+.nav-pills > li > a:hover {
+  border-radius: 0;
+  background-color: #181842;
+  color: #ffffff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  border-radius: 0;
+}
+
+.nav > li > a#by-tab {
+  padding: 5px 10px;
+  background-color: #181842;
+}
+
+a#by-tab {
+  color: #ffffff;
+}
+
+a#by-tab:hover {
+  color: #ffffff;
 }
 
 /* miscellaneous */
